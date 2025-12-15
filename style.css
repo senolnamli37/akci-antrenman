@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#f6f6f6; color:#111; }
+
+.top { background:#fff; border-bottom:1px solid #ddd; padding:14px 16px; position:sticky; top:0; z-index:2; }
+.brand { font-weight:900; letter-spacing:1px; margin-bottom:10px; }
+.tabs { display:flex; gap:10px; }
+.tab {
+  padding:10px 14px; border:1px solid #ccc; background:#fafafa;
+  border-radius:10px; cursor:pointer; font-weight:800;
+}
+.tab.active { background:#111; color:#fff; border-color:#111; }
+
+.panel { padding:20px 14px; max-width:1400px; margin:0 auto; }
+.hidden { display:none !important; }
+
+.bigTitle { text-align:center; font-weight:900; font-size: clamp(34px, 5vw, 78px); margin: 18px 0 10px; }
+
+.timerRow { display:flex; justify-content:center; align-items:center; gap:12px; margin: 8px 0 16px; }
+.timer { font-size: 30px; font-weight: 900; }
+
+.btn {
+  padding:10px 14px; border-radius:10px; border:1px solid #bbb;
+  background:#fff; cursor:pointer; font-weight:800;
+}
+.btn.primary { background:#0b5cff; border-color:#0b5cff; color:#fff; }
+
+.slotsRow {
+  display:flex; justify-content:center; gap:14px;
+  overflow-x:auto; padding:18px 6px;
+}
+.slot {
+  width: clamp(70px, 9vw, 140px);
+  height: clamp(95px, 12vw, 190px);
+  border:2px solid #222; border-radius:14px; background:#f2f2f2;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:900; font-size: clamp(34px, 5vw, 74px);
+  user-select:none;
+}
+
+.actions { display:flex; justify-content:center; margin-top:14px; }
+
+.overlay { position:fixed; inset:0; background:rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; z-index:10; }
+.overlayBox { background:#fff; border-radius:16px; padding:22px; min-width:320px; text-align:center; }
+.overlayText { font-size:26px; font-weight:900; margin-bottom:14px; }
