@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AKCI Antrenman</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">AKCI ANTRENMAN</div>
+    <div class="tabs">
+      <button id="tabIslem" class="tab active">İşlem Üret</button>
+      <button id="tabKelime" class="tab">Kelime Üret</button>
+    </div>
+  </header>
+
+  <!-- İşlem Üret -->
+  <main id="panelIslem" class="panel">
+    <div class="bigTitle" id="islemTarget">Hedef:</div>
+
+    <div class="timerRow">
+      <div class="timer" id="islemTimer">01:00</div>
+      <button class="btn" id="islemPause" style="display:none;">Süreyi durdur</button>
+    </div>
+
+    <div class="slotsRow" id="islemSlots"></div>
+
+    <div class="actions">
+      <button class="btn primary" id="islemNew">Yeni İşlem Sorusu Üret</button>
+    </div>
+
+    <div id="islemOverlay" class="overlay hidden">
+      <div class="overlayBox">
+        <div class="overlayText">Süre doldu!</div>
+        <button class="btn" id="islemOverlayClose">Kapat</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Kelime Üret -->
+  <main id="panelKelime" class="panel hidden">
+    <div class="bigTitle">8 Harf + *</div>
+
+    <div class="timerRow">
+      <div class="timer" id="kelimeTimer">01:00</div>
+      <button class="btn" id="kelimePause" style="display:none;">Süreyi durdur</button>
+    </div>
+
+    <div class="slotsRow" id="kelimeSlots"></div>
+
+    <div class="actions">
+      <button class="btn primary" id="kelimeNew">Yeni Harf Üret</button>
+    </div>
+
+    <div id="kelimeOverlay" class="overlay hidden">
+      <div class="overlayBox">
+        <div class="overlayText">Süre doldu!</div>
+        <button class="btn" id="kelimeOverlayClose">Kapat</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
